@@ -45,8 +45,6 @@
    node index.js
 
 ## Snapshots
-![Home Page](./assets/home.png)
-![Products Page](./assets/products.png)
-![Cart Page](./assets/cart.png)
+![Home Page](./assets/Home.png)
 
 
