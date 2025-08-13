@@ -1,0 +1,115 @@
+:root {
+  --primary: #4CAF50;
+  --primary-dark: #45a049;
+  --secondary: #2196F3;
+  --dark: #2d3748;
+  --light: #f7fafc;
+  --gray: #e2e8f0;
+  --danger: #e53e3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, .product-card {
+  transition: all 0.3s ease;
+}
+
+/* Fade-in animation for page transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: fadeIn 0.3s forwards;
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main-nav {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-to-cart {
+    flex-direction: column;
+  }
+}
+
+/* Button press effect */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Cart item removal animation */
+.cart-item {
+  transition: all 0.3s;
+}
+
+.cart-item.removing {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Success message after add to cart */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  animation: slideUp 0.3s forwards;
+  z-index: 1000;
+}
+
+.price::before {
+  content: '₹';
+}

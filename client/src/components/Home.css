@@ -1,0 +1,113 @@
+/* ===== Root Colors & Effects ===== */
+:root {
+  --bg-gradient: linear-gradient(135deg, #ff8a00, #da1b60);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --blur: blur(20px);
+}
+
+/* ===== General Layout ===== */
+.home {
+  font-family: 'Poppins', sans-serif;
+  background: #f6f6f9;
+  color: #2a2a2a;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: var(--bg-gradient);
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.1;
+  animation: float 8s infinite ease-in-out;
+}
+
+.hero::before {
+  width: 350px;
+  height: 350px;
+  top: -100px;
+  left: -100px;
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  right: -80px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(45deg); }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  opacity: 0.95;
+}
+
+/* ===== Features Section ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.feature {
+  background: var(--card-bg);
+  backdrop-filter: var(--blur);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.feature:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

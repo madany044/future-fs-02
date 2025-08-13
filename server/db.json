@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 999,
+      "description": "Premium sound quality with 40hr battery life",
+      "image": "/public/headphone.jpg",
+      "colors": ["Black", "Silver", "Blue"],
+      "rating": 4.8,
+      "reviews": 142,
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Smart Fitness Watch",
+      "price": 1499,
+      "description": "Track your workouts and health metrics",
+      "image": "/public/smartwatch.jpg",
+      "colors": ["Black", "Rose Gold"],
+      "rating": 4.6,
+      "reviews": 89,
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Organic Cotton T-Shirt",
+      "price": 299,
+      "description": "Sustainable fabric, comfortable fit",
+      "image": "/public/t-shirt.jpg",
+      "colors": ["S", "M","L","XL"],
+      "rating": 4.4,
+      "reviews": 56,
+      "inStock": true
+    },
+
+    {
+      "id": 4,
+      "name": "Cricket Bat",
+      "price": 850,
+      "description": "Sustainable Wood, Hard Wood",
+      "image": "/public/cricketbat.jpg",
+      "sizes": ["S", "M","L","XL"],
+      "colors":["White", "Black", "Navy"],
+      "rating": 4.4,
+      "reviews": 56,
+      "inStock": true
+    }
+  ]
+}
+   

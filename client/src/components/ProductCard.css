@@ -1,0 +1,197 @@
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.03);
+}
+
+.placeholder-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* Out of Stock Badge */
+.out-of-stock-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Price & Rating */
+.price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.rating {
+  color: #f39c12;
+  margin: 10px 0;
+}
+
+.rating span {
+  margin-right: 3px;
+}
+
+/* Color Options */
+.color-options {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+button:hover:not(.out-of-stock) {
+  background: #2980b9;
+}
+
+button.out-of-stock {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.image-container {
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.error-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.rating {
+  color: gold;
+  margin: 5px 0;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Image Wrapper */
+.product-image-wrapper {
+  width: 100%;
+  height: 230px; /* Fixed height for uniformity */
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Actual Image */
+.product-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures full image is shown */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Image Section - Clear and Fully Visible */
+.product-card img {
+  width: 100%;
+  height: auto; /* Let height adjust naturally */
+  max-height: 250px; /* Optional limit to keep cards aligned */
+  object-fit: contain; /* Show full image without cropping */
+  background-color: #f0f0f0;
+  padding: 10px; /* Some breathing space around the image */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03); /* Slight zoom but still fully visible */
+}
