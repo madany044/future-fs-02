@@ -54,7 +54,8 @@
 
 ![Footer Page](client/src/assets/Footer.png)
 
-
+## Credits
+Developed and maintained by [Madan Y](https://github.com/madany044)
 
 
 
