@@ -39,7 +39,7 @@
    cd client
    npm start
 
-4.  **Start the backend**
+4. **Start the backend**
    ```bash
    cd server
    node index.js
